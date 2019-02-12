@@ -12,6 +12,7 @@
     <string name="empty_favourites_list">No favourites yet</string>
     <string name="hint_type_note_here">Type your note here</string>
     <string name="action_save_note">Save notes</string>
+    <string name="action_sort_notes">Sort notes</string>
     <string name="delete_message">Are you sure you want to delete this note?</string>
     <string name="msg_added_to_favourites">Successfully added to favourites</string>
     <string name="msg_removed_from_favourites">Successfully removed from favourites</string>

@@ -6,6 +6,7 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.view.Menu
 import android.view.MenuItem
 import com.verizonconnect.graduate.android.mynotes.R
 import com.verizonconnect.graduate.android.mynotes.presentation.notelist.contract.NoteListContentContract
@@ -104,6 +105,20 @@ class NoteListActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
         }
         
         drawer_layout.closeDrawer(GravityCompat.START)
+        return true
+    }
+    
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.note_list_activity_menu, menu)
+        return true
+    }
+    
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.action_sort -> {
+                presenter.sortClicked(this)
+            }
+        }
         return true
     }
     
